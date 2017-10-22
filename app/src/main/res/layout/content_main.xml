@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="minhal.tomerbu.edu.tempconverter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/tvCelsiusDot"
+        android:text="•"
+        app:layout_constraintTop_toTopOf="@+id/tvCelsius"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCelsius"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="@+id/g1"
+        style="@style/tvCircleStyle" />
+
+    <TextView
+        android:id="@+id/tvCelsius"
+        android:text="Celsius"
+        app:layout_constraintRight_toLeftOf="@+id/g1"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/tvTempStyle" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/g1"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.43" />
+
+    <EditText
+        android:id="@+id/etCelsius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCelsius"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/tvCelsiusDot"
+        app:layout_constraintRight_toLeftOf="@+id/g2"
+        app:layout_constraintTop_toTopOf="@+id/tvCelsius"
+        app:layout_constraintVertical_bias="0.473" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/g2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.74" />
+
+    <TextView
+        android:id="@+id/tvCelsiusUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:text="ºC"
+        android:textColor="@color/colorCelsius"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCelsius"
+        app:layout_constraintLeft_toLeftOf="@+id/g2"
+        app:layout_constraintTop_toTopOf="@+id/tvCelsius"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tvFahrenheit"
+        style="@style/tvTempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:text="Fehrenheit"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFahrenheitDot"
+        app:layout_constraintTop_toTopOf="@+id/tvFahrenheitDot"
+        android:layout_marginRight="0dp"
+        app:layout_constraintVertical_bias="0.489"
+        app:layout_constraintRight_toRightOf="@+id/tvCelsius" />
+
+    <TextView
+        android:id="@+id/tvFahrenheitDot"
+        android:layout_width="wrap_content"
+
+        android:text="•"
+        style="@style/tvCircleStyle"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCelsiusDot"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/g1" />
+
+    <EditText
+        android:id="@+id/etFahrenheit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintRight_toLeftOf="@+id/g2"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/etCelsius"
+        app:layout_constraintTop_toTopOf="@+id/tvFahrenheitDot"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFahrenheitDot"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/tvFahrenheitUnits"
+        style="@style/tvTempStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:text="ºF"
+        app:layout_constraintBottom_toBottomOf="@+id/etFahrenheit"
+        app:layout_constraintLeft_toLeftOf="@+id/tvCelsiusUnits"
+        app:layout_constraintRight_toRightOf="@+id/tvCelsiusUnits"
+        app:layout_constraintTop_toTopOf="@+id/etFahrenheit" />
+
+</android.support.constraint.ConstraintLayout>
